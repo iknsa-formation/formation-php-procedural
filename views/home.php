@@ -70,6 +70,31 @@ if (
     </form>
 <?php endif; ?>
 <hr>
+<hr>
+<hr>
+<hr>
+
+<?php require_once "includes/GetProducts.php"; ?>
+
+
+<table>
+    <thead>
+    <tr>
+        <th>Nom</th>
+        <th>Code</th>
+        <th>Créer par</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($products as $product): ?>
+    <tr>
+        <td><?= $product["nom"]; ?></td>
+        <td><?= $product["code"]; ?></td>
+        <td><?= $product["created_by"]; ?></td>
+    </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
 
 <?php require_once "includes/GetUsers.php"; ?>
 

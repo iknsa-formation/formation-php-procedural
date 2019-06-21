@@ -41,6 +41,12 @@ $routes = [
         "resource" => "signup",
         "methods" => ["POST"]
     ],
+    "/index.php/product" => [
+        "uri" => "/index.php/product",
+        "authorised" => "security",
+        "resource" => "product",
+        "methods" => ["GET", "POST"]
+    ],
     "/index.php/error" => [
         "uri" => "/index.php/security/error",
         "authorised" => "ANNONYMOUS",
